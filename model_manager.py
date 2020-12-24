@@ -86,7 +86,7 @@ class ConstraintsBlock:
         # Cas où on ne veut pas encoder les contraintes en dur
         # Dans ce cas, on crée une variable bool par contrainte unitaire, et on cherchera à minimiser la somme
         # de ces variables
-        else:
+        if self.relaxable:
             objective_value = self.relaxation_value()
             self.model_manager.store_objective(self.name, objective_value, self.relaxation_weight)
 
