@@ -1,6 +1,4 @@
 import collections
-
-# Import Python wrapper for or-tools CP-SAT solver.
 from ortools.sat.python import cp_model
 from tracking_solver import OptimisationWithTracking
 
